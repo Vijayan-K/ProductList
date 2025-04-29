@@ -15,7 +15,7 @@ export class ProductListComponent implements OnInit {
   FilterList:any=[];
   FilterProductList :any =[];
   currentPage: number = 1;
-  itemperpage : number =5;
+  itemperpage : number = 10;
   totalPages : number =0;
 
   constructor(private productService:ProductServiceService) { }
