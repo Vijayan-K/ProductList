@@ -41,8 +41,14 @@ export class ProductListComponent implements OnInit {
     this.FilterList = this.ProductList.filter((value: any)=>value.name.toLowerCase().includes(this.suggestion)
     ).slice(0,5);
     this.SuggestionList = this.FilterList;
-    this.currentPage = 1;
-    this.Pagination();
+    if(this.currentPage == 2){
+      this.Pagination();
+    }
+    else{
+      this.currentPage = 1;
+      this.Pagination();
+    }
+   
   }
   }
 
